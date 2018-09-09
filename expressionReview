@@ -1,0 +1,53 @@
+//Sydney Donovan
+//Complete
+//This program reads 2 integers from the keyboard and prints the sum,
+//product, integer quotient, integer remainder, floating-point quotient,
+//and the average of the 2 integers.
+
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int main()
+{
+  int int1; //stores first integer from user input
+  int int2; //stores second integer from user input
+  int sum; //stores the sum of the two integer values
+  int product; //stores the product of the two integer values
+  int intQuotient; //stores the integer quotient of integer 1 divided by integer 2
+  int remainder; //stores the remainder of integer division of integer 1 divided by integer 2
+  double floatQuotient; //stores the floating-point quotient of integer 1 divided by integer 2
+  double averagae; //stores the average (floating point) of the two integer values
+  
+  //assigns value to int1 from user input
+  cout << "Enter first integer: ";
+  cin >> int1;
+  
+  //assigns value to int2 from user input
+  cout << "Enter second integer: ";
+  cin >> int2;
+  
+  //calculates & prints sum, product, intQuotient, and remainder of the two integer values
+  sum = int1 + int2;
+  cout << left << setw(24) << "Sum";
+  cout << sum << endl;
+  product = int1 * int2;
+  cout << left << setw(24) << "Product";
+  cout << product << endl;
+  intQuotient = int1 / int2;
+  cout << left << setw(24) << "Quotient";
+  cout << intQuotient << endl;
+  remainder = int1 % int2;
+  cout << left << setw(24) << "Remainder";
+  cout << remainder << endl;
+  
+  //divides, but first converts int1 to a floating-point variable to allow for floating-point division, then prints result
+  floatQuotient = static_cast<double>(int1) / int2;
+  cout << left << setw(24) << "Floating-Point Quotient";
+  cout << floatQuotient << endl;
+  
+  //calculates the average, but first converts sum to a floating point variable to allow for floating-point division, then prints result
+  average = static_cast<double>(sum) / 2.0;
+  cout << left << setw(24) << "Average";
+  cout << average << endl;
+}
